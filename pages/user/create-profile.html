@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="icon" href="../../assets/img/logo.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600;9..144,700&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+<link rel="stylesheet" href="../../assets/css/variables.css">
+<link rel="stylesheet" href="../../assets/css/base.css">
+<link rel="stylesheet" href="../../assets/css/components.css">
+<link rel="stylesheet" href="../../assets/css/layout.css">
+<link rel="stylesheet" href="../../assets/css/pages/app.css">
+<title>Create profile | MatrimonyHub</title>
+</head>
+<body class="app" data-mode="create">
+<div class="app-shell">
+  <aside class="sidebar" id="sidebar"></aside>
+  <div class="app-main">
+    <header class="topbar" id="topbar"></header>
+    <main class="content" id="content">
+
+      <div class="form-wrap">
+        <ol class="stepper" aria-label="Progress"><li class="on"><span>1</span>Basics</li><li><span>2</span>Background</li><li><span>3</span>About you</li></ol>
+        <form id="profileForm" novalidate>
+        
+        <div class="form-step">
+          <section class="panel form-section">
+            <h2>Basic details</h2><p class="sub">The first things people see on your profile.</p>
+            <div class="photo-up">
+              <div class="photo-prev" id="photoPrev"><i class="fas fa-camera"></i></div>
+              <div><label class="btn btn-outline btn-sm" for="photoFile" style="cursor:pointer"><i class="fas fa-upload"></i> Upload photo</label>
+                <input type="file" id="photoFile" accept="image/*" class="sr-only"><p class="hint">JPG or PNG, up to 5 MB. A clear face photo works best.</p></div>
+            </div>
+            <div class="form-grid">
+              <div class="field full"><label for="full_name">Full name</label><input class="input" id="full_name" name="full_name" required minlength="3" maxlength="100"></div>
+              <div class="field"><label for="gender">I am a</label><select class="select" id="gender" name="gender" required><option value="">Select</option><option value="MALE">Groom (male)</option><option value="FEMALE">Bride (female)</option></select></div>
+              <div class="field"><label for="age">Age</label><input class="input" type="number" id="age" name="age" min="18" max="100" required></div>
+              <div class="field"><label for="marital_status">Marital status</label><select class="select" id="marital_status" name="marital_status" required><option value="">Select</option><option>Never married</option><option>Divorced</option><option>Widowed</option></select></div>
+              <div class="field"><label for="religion">Religion</label><select class="select" id="religion" name="religion" required><option value="">Select</option><option>Islam</option><option>Hinduism</option><option>Christianity</option><option>Buddhism</option><option>Other</option></select></div>
+              <div class="field"><label for="height">Height (cm)</label><input class="input" type="number" id="height" name="height" min="100" max="250"></div>
+              <div class="field"><label for="weight">Weight (kg)</label><input class="input" type="number" id="weight" name="weight" min="30" max="200"></div>
+            </div>
+          </section>
+        </div> 
+        <div class="form-step">
+          <section class="panel form-section">
+            <h2>Education, work and location</h2><p class="sub">Helps families judge compatibility.</p>
+            <div class="form-grid">
+              <div class="field"><label for="education">Education</label><input class="input" id="education" name="education" placeholder="e.g. BSc in CSE" required></div>
+              <div class="field"><label for="occupation">Occupation</label><input class="input" id="occupation" name="occupation" placeholder="e.g. Software Engineer" required></div>
+              <div class="field"><label for="city">City</label><input class="input" id="city" name="city" required></div>
+              <div class="field"><label for="state">Division</label><select class="select" id="state" name="state" required><option value="">Select</option><option>Dhaka</option><option>Chattogram</option><option>Rajshahi</option><option>Khulna</option><option>Barishal</option><option>Sylhet</option><option>Rangpur</option><option>Mymensingh</option></select></div>
+              <div class="field"><label for="country">Country</label><input class="input" id="country" name="country" value="Bangladesh"></div>
+              <div class="field"><label for="phone">Mobile number</label><input class="input" type="tel" id="phone" name="phone" placeholder="01XXXXXXXXX"><p class="hint">Only premium members can see this.</p></div>
+            </div>
+          </section>
+        </div> 
+        <div class="form-step">
+          <section class="panel form-section">
+            <h2>About you</h2><p class="sub">Write in your own words. A few honest lines beat a long essay.</p>
+            <div class="field"><label for="about_me">About me</label><textarea class="textarea" id="about_me" name="about_me" maxlength="1500"></textarea></div>
+            <div class="field"><label for="preferences">What I am looking for</label><textarea class="textarea" id="preferences" name="preferences" maxlength="1500"></textarea></div>
+            <div class="field"><label for="family_details">Family details</label><textarea class="textarea" id="family_details" name="family_details" maxlength="1500" placeholder="Parents, siblings, family background"></textarea></div>
+          </section>
+        </div>
+          <div class="form-actions">
+            <button type="button" class="btn btn-outline" id="prevBtn"><i class="fas fa-arrow-left"></i> Back</button>
+            <div class="right">
+              <button type="button" class="btn btn-primary" id="nextBtn">Continue <i class="fas fa-arrow-right"></i></button>
+              <button type="submit" class="btn btn-primary" id="submitBtn" hidden><i class="fas fa-check"></i> Save profile</button>
+            </div>
+          </div>
+        </form>
+      </div>
+    </main>
+  </div>
+</div>
+<div class="scrim" id="scrim"></div>
+<script type="module" src="../../assets/js/pages/profile-form.js"></script>
+</body>
+</html>

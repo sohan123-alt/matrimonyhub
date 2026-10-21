@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="icon" href="assets/img/logo.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600;9..144,700&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+<link rel="stylesheet" href="assets/css/variables.css">
+<link rel="stylesheet" href="assets/css/base.css">
+<link rel="stylesheet" href="assets/css/components.css">
+<link rel="stylesheet" href="assets/css/layout.css">
+<link rel="stylesheet" href="assets/css/pages/content.css">
+<title>Contact | MatrimonyHub</title>
+<meta name="description" content="Contact the MatrimonyHub team about your account, payments or a profile.">
+</head>
+<body>
+<header class="navbar">
+  <div class="container nav-inner">
+    <a href="index.html" class="logo"><span class="logo-mark"><i class="fas fa-heart"></i></span>MatrimonyHub</a>
+    <button class="nav-toggle" id="navToggle" aria-label="Open menu" aria-expanded="false" aria-controls="navMenu"><i class="fas fa-bars"></i></button>
+    <div class="nav-menu" id="navMenu">
+      <nav class="nav-links" aria-label="Main">
+        <a href="index.html#how">How it works</a>
+        <a href="about.html">About</a>
+        <a href="faq.html">FAQ</a>
+        <a href="contact.html">Contact</a>
+      </nav>
+      <div class="nav-actions">
+        <a href="login.html" class="btn btn-ghost"><i class="fas fa-right-to-bracket"></i> Log in</a>
+        <a href="register.html" class="btn btn-primary"><i class="fas fa-user-plus"></i> Create free account</a>
+      </div>
+    </div>
+  </div>
+</header>
+<section class="page-hero"><div class="container"><h1>Talk to a real person</h1><p>Questions about your account, a payment or a profile? Send us a note and we will reply by email.</p></div></section>
+<div class="container contact-grid">
+  <div>
+    <h2 style="font-size:1.7rem">Get in touch</h2>
+    <p style="margin-top:.5rem">We read every message. Please include your account email and any transaction ID if you are asking about a payment.</p>
+    <ul class="c-list">
+      <li><i class="fas fa-envelope"></i><div><b>Email</b><span>support@matrimonyhub.com</span></div></li>
+      <li><i class="fas fa-clock"></i><div><b>Reply time</b><span>Usually within one working day</span></div></li>
+      <li><i class="fas fa-location-dot"></i><div><b>Based in</b><span>Dhaka, Bangladesh</span></div></li>
+    </ul>
+  </div>
+  <form class="form-panel" id="contactForm" novalidate>
+    <div class="field"><label for="name">Your name</label><div class="input-wrap"><i class="fas fa-user lead"></i><input class="input" id="name" name="name" autocomplete="name" required></div></div>
+    <div class="field"><label for="email">Email</label><div class="input-wrap"><i class="fas fa-envelope lead"></i><input class="input" type="email" id="email" name="email" autocomplete="email" required></div></div>
+    <div class="field"><label for="topic">Topic</label><select class="select" id="topic" name="topic"><option>Account help</option><option>Payment question</option><option>Report a profile</option><option>Feedback</option></select></div>
+    <div class="field"><label for="message">Message</label><textarea class="textarea" id="message" name="message" required></textarea></div>
+    <button class="btn btn-primary btn-lg btn-block" type="submit"><i class="fas fa-paper-plane"></i> Send message</button>
+    <p class="hint" style="margin-top:.8rem">This opens your email app with the message filled in.</p>
+  </form>
+</div>
+<footer class="footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div>
+        <a href="index.html" class="logo"><span class="logo-mark"><i class="fas fa-heart"></i></span>MatrimonyHub</a>
+        <p>A trusted place for families in Bangladesh to find a life partner.</p>
+        <div class="social">
+          <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+          <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+          <a href="#" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+        </div>
+      </div>
+      <div><h4>Explore</h4><ul><li><a href="index.html#how">How it works</a></li><li><a href="index.html#plans">Plans</a></li><li><a href="about.html">About us</a></li><li><a href="faq.html">FAQ</a></li></ul></div>
+      <div><h4>Account</h4><ul><li><a href="login.html">Log in</a></li><li><a href="register.html">Register</a></li><li><a href="forgot-password.html">Forgot password</a></li></ul></div>
+      <div><h4>Contact</h4><ul><li><a href="mailto:support@matrimonyhub.com"><i class="fas fa-envelope"></i> support@matrimonyhub.com</a></li><li><a href="contact.html"><i class="fas fa-message"></i> Send a message</a></li></ul></div>
+    </div>
+    <div class="footer-bottom"><span>&copy; 2026 MatrimonyHub &middot; <a href="terms.html" style="color:inherit">Terms</a> &middot; <a href="privacy.html" style="color:inherit">Privacy</a></span><span>Made with <i class="fas fa-heart" style="color:var(--rose)"></i> in Bangladesh</span></div>
+  </div>
+</footer>
+<script type="module" src="assets/js/components/navbar.js"></script>
+<script type="module" src="assets/js/pages/contact.js"></script>
+</body>
+</html>

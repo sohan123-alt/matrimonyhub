@@ -1,0 +1,24 @@
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+html { scroll-behavior: smooth; -webkit-text-size-adjust: 100%; }
+body {
+  font-family: var(--font-body);
+  color: var(--ink);
+  background: var(--white);
+  line-height: 1.65;
+  font-size: 16px;
+  -webkit-font-smoothing: antialiased;
+}
+h1, h2, h3, h4 { font-family: var(--font-display); line-height: 1.15; font-weight: 600; letter-spacing: -.01em; }
+p { color: var(--ink-soft); }
+a { color: var(--rose); text-decoration: none; transition: color .2s; }
+a:hover { color: var(--rose-dark); }
+img, svg { max-width: 100%; display: block; }
+ul { list-style: none; }
+button, input, select, textarea { font: inherit; color: inherit; }
+button { cursor: pointer; border: 0; background: none; }
+:focus-visible { outline: 3px solid rgba(103, 58, 183, .45); outline-offset: 2px; border-radius: 6px; }
+.container { width: min(100% - 2.5rem, var(--container)); margin-inline: auto; }
+.sr-only { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; }
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after { animation: none !important; transition: none !important; scroll-behavior: auto !important; }
+}

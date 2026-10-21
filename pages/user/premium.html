@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="icon" href="../../assets/img/logo.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600;9..144,700&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+<link rel="stylesheet" href="../../assets/css/variables.css">
+<link rel="stylesheet" href="../../assets/css/base.css">
+<link rel="stylesheet" href="../../assets/css/components.css">
+<link rel="stylesheet" href="../../assets/css/layout.css">
+<link rel="stylesheet" href="../../assets/css/pages/app.css">
+<title>Premium | MatrimonyHub</title>
+</head>
+<body class="app" >
+<div class="app-shell">
+  <aside class="sidebar" id="sidebar"></aside>
+  <div class="app-main">
+    <header class="topbar" id="topbar"></header>
+    <main class="content" id="content">
+
+      <div id="note"></div>
+      <div class="pay-grid">
+        <form class="panel" id="payForm" novalidate>
+          <h2>1. Choose a plan</h2>
+          <div class="pick-grid" id="plans"></div>
+          <h2>2. Choose how you will pay</h2>
+          <div class="pick-grid" id="methods" style="grid-template-columns:repeat(auto-fit,minmax(130px,1fr))"></div>
+          <h2>3. Enter your transaction ID</h2>
+          <div class="field"><label for="txn">Transaction ID</label><input class="input" id="txn" name="txn" placeholder="e.g. 9A7B3C2D1E" autocomplete="off" required><p class="hint">You get this in the confirmation message after sending the money.</p></div>
+          <button class="btn btn-primary btn-lg btn-block" id="submitBtn" type="submit"><i class="fas fa-paper-plane"></i> Submit payment</button>
+        </form>
+        <aside class="panel sum">
+          <h2>Order summary</h2>
+          <dl>
+            <div><dt>Plan</dt><dd id="sPlan"></dd></div>
+            <div><dt>Duration</dt><dd id="sMonths"></dd></div>
+            <div><dt>Total</dt><dd class="total" id="sTotal"></dd></div>
+          </dl>
+          <div class="how-pay" id="howPay"></div>
+          <p class="hint"><i class="fas fa-shield-halved"></i> Premium turns on after we confirm your payment.</p>
+        </aside>
+      </div>
+    </main>
+  </div>
+</div>
+<div class="scrim" id="scrim"></div>
+<script type="module" src="../../assets/js/pages/premium.js"></script>
+</body>
+</html>

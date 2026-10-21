@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="icon" href="../../assets/img/logo.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600;9..144,700&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+<link rel="stylesheet" href="../../assets/css/variables.css">
+<link rel="stylesheet" href="../../assets/css/base.css">
+<link rel="stylesheet" href="../../assets/css/components.css">
+<link rel="stylesheet" href="../../assets/css/layout.css">
+<link rel="stylesheet" href="../../assets/css/pages/app.css">
+<title>Browse profiles | MatrimonyHub</title>
+</head>
+<body class="app" >
+<div class="app-shell">
+  <aside class="sidebar" id="sidebar"></aside>
+  <div class="app-main">
+    <header class="topbar" id="topbar"></header>
+    <main class="content" id="content">
+
+      <form class="panel filters" id="filters">
+        <div><label for="gender">Looking for</label><select class="select" id="gender" name="gender"><option value="">Anyone</option><option value="FEMALE">Bride</option><option value="MALE">Groom</option></select></div>
+        <div><label for="ageMin">Age from</label><input class="input" type="number" id="ageMin" name="ageMin" min="18" max="100" placeholder="18"></div>
+        <div><label for="ageMax">Age to</label><input class="input" type="number" id="ageMax" name="ageMax" min="18" max="100" placeholder="60"></div>
+        <div><label for="religion">Religion</label><select class="select" id="religion" name="religion"><option value="">Any</option><option>Islam</option><option>Hinduism</option><option>Christianity</option><option>Buddhism</option><option>Other</option></select></div>
+        <div><label for="marital">Marital status</label><select class="select" id="marital" name="marital"><option value="">Any</option><option>Never married</option><option>Divorced</option><option>Widowed</option></select></div>
+        <div><label for="city">City</label><input class="input" id="city" name="city" placeholder="e.g. Dhaka"></div>
+        <div style="display:flex;gap:.5rem"><button class="btn btn-primary" type="submit"><i class="fas fa-filter"></i> Apply</button><button class="btn btn-outline" type="reset" aria-label="Reset filters"><i class="fas fa-rotate-left"></i></button></div>
+      </form>
+      <div class="result-bar"><span id="count">Searching...</span><span><i class="fas fa-crown" style="color:#e0a21c"></i> Premium members are listed first</span></div>
+      <div class="cards" id="grid"></div>
+      <div class="pager" id="pager"></div>
+    </main>
+  </div>
+</div>
+<div class="scrim" id="scrim"></div>
+<script type="module" src="../../assets/js/pages/browse.js"></script>
+</body>
+</html>

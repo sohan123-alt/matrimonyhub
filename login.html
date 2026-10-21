@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="icon" href="assets/img/logo.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600;9..144,700&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+<link rel="stylesheet" href="assets/css/variables.css">
+<link rel="stylesheet" href="assets/css/base.css">
+<link rel="stylesheet" href="assets/css/components.css">
+<link rel="stylesheet" href="assets/css/layout.css">
+<link rel="stylesheet" href="assets/css/pages/auth.css">
+<title>Log in | MatrimonyHub</title>
+</head>
+<body>
+<div class="auth">
+  <aside class="auth-aside">
+    <a href="index.html" class="logo"><span class="logo-mark"><i class="fas fa-heart"></i></span>MatrimonyHub</a>
+    <div class="aside-body">
+      <h2>Good to see you again.</h2>
+      <p>Pick up where you left off. New matches and messages may be waiting.</p>
+      <ul class="perks">
+        <li><i class="fas fa-user-check"></i> Verified profiles only</li>
+        <li><i class="fas fa-lock"></i> Your contact details stay private</li>
+        <li><i class="fas fa-crown"></i> Premium unlocks direct contact</li>
+      </ul>
+    </div>
+    <div class="aside-foot">&copy; 2026 MatrimonyHub</div>
+  </aside>
+
+  <main class="auth-main">
+    <div class="auth-box">
+      <a href="index.html" class="back"><i class="fas fa-arrow-left"></i> Back to home</a>
+      <h1>Log in</h1>
+      <p>Enter your email and password to continue.</p>
+
+      <div class="alert" id="alert" role="alert"><i class="fas fa-circle-exclamation"></i><span></span></div>
+
+      <form id="loginForm" novalidate>
+        <div class="field">
+          <label for="email">Email</label>
+          <div class="input-wrap">
+            <i class="fas fa-envelope lead"></i>
+            <input class="input" type="email" id="email" name="email" placeholder="you@example.com" autocomplete="email" required>
+          </div>
+        </div>
+        <div class="field">
+          <label for="password">Password</label>
+          <div class="input-wrap">
+            <i class="fas fa-lock lead"></i>
+            <input class="input" type="password" id="password" name="password" placeholder="Your password" autocomplete="current-password" required>
+            <button type="button" class="toggle-pass" data-target="password" aria-label="Show password"><i class="fas fa-eye"></i></button>
+          </div>
+        </div>
+        <div class="row-between">
+          <label class="check"><input type="checkbox" name="remember" checked> Keep me logged in</label>
+          <a href="forgot-password.html">Forgot password?</a>
+        </div>
+        <button type="submit" id="submitBtn" class="btn btn-primary btn-lg btn-block"><i class="fas fa-right-to-bracket"></i> Log in</button>
+      </form>
+
+      <p class="switch">New here? <a href="register.html">Create a free account</a></p>
+    </div>
+  </main>
+</div>
+<script type="module" src="assets/js/pages/login.js"></script>
+</body>
+</html>

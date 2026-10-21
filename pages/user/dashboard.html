@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="icon" href="../../assets/img/logo.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600;9..144,700&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+<link rel="stylesheet" href="../../assets/css/variables.css">
+<link rel="stylesheet" href="../../assets/css/base.css">
+<link rel="stylesheet" href="../../assets/css/components.css">
+<link rel="stylesheet" href="../../assets/css/layout.css">
+<link rel="stylesheet" href="../../assets/css/pages/app.css">
+<title>Dashboard | MatrimonyHub</title>
+</head>
+<body class="app" >
+<div class="app-shell">
+  <aside class="sidebar" id="sidebar"></aside>
+  <div class="app-main">
+    <header class="topbar" id="topbar"></header>
+    <main class="content" id="content">
+
+      <section class="welcome">
+        <div>
+          <h2 id="hello">Welcome</h2>
+          <p id="helloText">Loading your account...</p>
+          <a href="create-profile.html" id="helloCta" class="btn btn-light"><i class="fas fa-id-card"></i> Create profile</a>
+        </div>
+        <div class="ring" id="ring"><span><b id="pct" style="font-weight:600">0%</b><small>complete</small></span></div>
+      </section>
+      <div class="dash-grid">
+        <section class="panel">
+          <div class="row-head"><h2>Suggested for you</h2><a href="browse.html" class="link-more">See all profiles</a></div>
+          <div class="cards four" id="matches"></div>
+        </section>
+        <div class="stack-gap">
+          <section class="panel"><h2>Your account</h2><ul class="status-list" id="status"></ul></section>
+          <section class="panel"><h2>Quick actions</h2>
+            <div class="quick">
+              <a href="browse.html"><i class="fas fa-magnifying-glass"></i>Browse profiles<i class="fas fa-chevron-right"></i></a>
+              <a href="edit-profile.html"><i class="fas fa-pen"></i>Edit my profile<i class="fas fa-chevron-right"></i></a>
+              <a href="premium.html"><i class="fas fa-crown"></i>Upgrade to premium<i class="fas fa-chevron-right"></i></a>
+            </div>
+          </section>
+        </div>
+      </div>
+    </main>
+  </div>
+</div>
+<div class="scrim" id="scrim"></div>
+<script type="module" src="../../assets/js/pages/user-dashboard.js"></script>
+</body>
+</html>

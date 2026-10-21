@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="icon" href="../../assets/img/logo.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600;9..144,700&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+<link rel="stylesheet" href="../../assets/css/variables.css">
+<link rel="stylesheet" href="../../assets/css/base.css">
+<link rel="stylesheet" href="../../assets/css/components.css">
+<link rel="stylesheet" href="../../assets/css/layout.css">
+<link rel="stylesheet" href="../../assets/css/pages/app.css">
+<link rel="stylesheet" href="../../assets/css/pages/admin.css">
+<title>Staff dashboard | MatrimonyHub</title>
+</head>
+<body class="app">
+<div class="app-shell">
+  <aside class="sidebar" id="sidebar"></aside>
+  <div class="app-main">
+    <header class="topbar" id="topbar"></header>
+    <main class="content" id="content">
+
+      <section class="welcome" style="grid-template-columns:1fr">
+        <div><h2 id="hello">Hello</h2><p id="helloText">Loading your tasks...</p><a href="my-tasks.html" class="btn btn-light"><i class="fas fa-list-check"></i> Open my tasks</a></div>
+      </section>
+      <div class="stats" id="stats" style="margin-top:1.4rem"></div>
+      <section class="panel"><div class="row-head"><h2>Up next</h2><a href="my-tasks.html" class="link-more">View board</a></div><div id="next"><div class="skel" style="height:140px"></div></div></section>
+    </main>
+  </div>
+</div>
+<div class="scrim" id="scrim"></div>
+
+<script type="module" src="../../assets/js/pages/staff-dashboard.js"></script>
+</body>
+</html>

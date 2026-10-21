@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="icon" href="../../assets/img/logo.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600;9..144,700&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+<link rel="stylesheet" href="../../assets/css/variables.css">
+<link rel="stylesheet" href="../../assets/css/base.css">
+<link rel="stylesheet" href="../../assets/css/components.css">
+<link rel="stylesheet" href="../../assets/css/layout.css">
+<link rel="stylesheet" href="../../assets/css/pages/app.css">
+<link rel="stylesheet" href="../../assets/css/pages/admin.css">
+<title>Payments | MatrimonyHub</title>
+</head>
+<body class="app">
+<div class="app-shell">
+  <aside class="sidebar" id="sidebar"></aside>
+  <div class="app-main">
+    <header class="topbar" id="topbar"></header>
+    <main class="content" id="content">
+
+      <div class="stats" style="grid-template-columns:repeat(3,1fr)">
+        <div class="stat"><span class="ico amber"><i class="fas fa-hourglass-half"></i></span><div><b id="sPending">0</b><small>Waiting for review</small></div></div>
+        <div class="stat"><span class="ico green"><i class="fas fa-circle-check"></i></span><div><b id="sPaid">0</b><small>Approved</small></div></div>
+        <div class="stat"><span class="ico purple"><i class="fas fa-sack-dollar"></i></span><div><b id="sRev">0</b><small>Revenue</small></div></div>
+      </div>
+      <div class="toolbar"><div class="tabs" id="tabs"><button class="on" data-t="PENDING">In review<small>0</small></button><button data-t="PAID">Paid<small>0</small></button><button data-t="FAILED">Failed<small>0</small></button><button data-t="ALL">All<small>0</small></button></div></div>
+      <div class="panel table-wrap"><table class="tbl"><thead><tr><th>Member</th><th>Plan</th><th>Transaction</th><th>Amount</th><th>Status</th><th></th></tr></thead><tbody id="rows"><tr><td colspan="6"><div class="skel" style="height:120px"></div></td></tr></tbody></table></div>
+    </main>
+  </div>
+</div>
+<div class="scrim" id="scrim"></div>
+
+<script type="module" src="../../assets/js/pages/admin-payments.js"></script>
+</body>
+</html>
